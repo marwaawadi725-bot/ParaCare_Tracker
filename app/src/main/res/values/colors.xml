@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0B6B5D</color>
+    <color name="primary_light">#E3F1EE</color>
+    <color name="bg">#F1F5FB</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="field_bg">#EEF2FA</color>
+    <color name="stroke">#D5DCE8</color>
+    <color name="text_primary">#17212B</color>
+    <color name="text_secondary">#6B7685</color>
+    <color name="danger">#D9382F</color>
+    <color name="warning">#F29A1F</color>
+    <color name="white">#FFFFFF</color>
+    <color name="level_green">#2E9E6B</color>
+    <color name="level_orange">#F29A1F</color>
+    <color name="level_red">#D9382F</color>
+</resources>

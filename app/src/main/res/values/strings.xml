@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ParaCare Tracker</string>
+    <string name="tagline">Votre parapharmacie connectée &amp; anti-gaspillage</string>
+    <string name="connexion">Connexion</string>
+    <string name="role_client">Client</string>
+    <string name="role_pharmacien">Pharmacien Pro</string>
+    <string name="badge_scan">Accès Trousse Santé &amp; Scan IA</string>
+    <string name="badge_particulier">PARTICULIER</string>
+    <string name="label_email">Adresse e-mail</string>
+    <string name="hint_email">nom@exemple.fr</string>
+    <string name="label_password">Mot de passe</string>
+    <string name="hint_password">••••••••••••</string>
+    <string name="forgot">Mot de passe oublié ?</string>
+    <string name="forgot_info">Fonction bientôt disponible.</string>
+    <string name="login">Se connecter</string>
+    <string name="or">ou</string>
+    <string name="fingerprint_login">Connexion rapide par empreinte</string>
+    <string name="new_on">Nouveau sur ParaCare ?</string>
+    <string name="create_secure">Créer un compte sécurisé →</string>
+    <string name="data_secure">Données de santé chiffrées &amp; hébergement HDS</string>
+
+    <string name="inscription">Inscription</string>
+    <string name="assistant_version">PARACARE ASSISTANT V2.4</string>
+    <string name="create_account_title">Créer un compte ParaCare</string>
+    <string name="create_account_sub">Gérez votre santé et optimisez vos soins parapharmaceutiques en toute sérénité.</string>
+    <string name="i_am_client">Je suis un Client</string>
+    <string name="client_sub">Trousse &amp; alertes PAO</string>
+    <string name="i_am_pharmacist">Je suis Pharmacien</string>
+    <string name="pharmacist_sub">Stock &amp; anti-gaspillage</string>
+    <string name="hint_client">Suivi précis des durées d\'ouverture (PAO) &amp; rappels automatiques.</string>
+    <string name="hint_pharmacist">Gestion du stock, alertes de péremption &amp; anti-gaspillage.</string>
+    <string name="label_fullname">Nom complet *</string>
+    <string name="hint_fullname">ex. Camille Laurent</string>
+    <string name="label_email_req">Adresse email *</string>
+    <string name="hint_email_reg">camille.laurent@exemple.fr</string>
+    <string name="label_phone">Numéro de téléphone *</string>
+    <string name="sms_alerts">ALERTES SMS</string>
+    <string name="hint_phone">+33 6 12 34 56 78</string>
+    <string name="label_password_req">Mot de passe *</string>
+    <string name="hint_password_min">Minimum 8 caractères</string>
+    <string name="security">Sécurité :</string>
+    <string name="strength_none">Non renseigné</string>
+    <string name="strength_weak">Faible</string>
+    <string name="strength_medium">Moyen</string>
+    <string name="strength_strong">Fort</string>
+    <string name="label_confirm">Confirmer le mot de passe *</string>
+    <string name="hint_confirm">Retapez votre mot de passe</string>
+    <string name="accept_terms">J\'accepte les conditions d\'utilisation et la politique de protection des données de santé (RGPD &amp; HDS).</string>
+    <string name="accept_alerts">Recevoir les alertes de péremption, durées PAO et conseils parapharmacie personnalisés par notification.</string>
+    <string name="create_my_account">Créer mon compte</string>
+    <string name="already_account">Vous avez déjà un compte ?</string>
+    <string name="sign_in">Se connecter →</string>
+    <string name="data_hosted">Données hébergées sur serveurs certifiés HDS</string>
+
+    <string name="err_email_required">Veuillez saisir votre e-mail</string>
+    <string name="err_password_required">Veuillez saisir votre mot de passe</string>
+    <string name="err_bad_credentials">E-mail ou mot de passe incorrect</string>
+    <string name="err_wrong_role_client">Ce compte est un compte Client. Choisissez l\'onglet « Client ».</string>
+    <string name="err_wrong_role_pharmacist">Ce compte est un compte Pharmacien. Choisissez l\'onglet « Pharmacien Pro ».</string>
+    <string name="err_name_required">Veuillez saisir votre nom complet</string>
+    <string name="err_email_invalid">Adresse e-mail invalide</string>
+    <string name="err_email_taken">Cet e-mail est déjà utilisé</string>
+    <string name="err_phone_invalid">Numéro de téléphone invalide</string>
+    <string name="err_password_short">8 caractères minimum</string>
+    <string name="err_password_mismatch">Les mots de passe ne correspondent pas</string>
+    <string name="err_terms">Vous devez accepter les conditions d\'utilisation</string>
+    <string name="account_created">Compte créé avec succès</string>
+
+    <string name="fp_first_login">Connectez-vous une première fois avec votre mot de passe pour activer l\'empreinte.</string>
+    <string name="fp_unavailable">Aucune empreinte digitale disponible sur cet appareil.</string>
+    <string name="fp_title">Connexion par empreinte</string>
+    <string name="fp_subtitle">Posez votre doigt sur le capteur</string>
+    <string name="cancel">Annuler</string>
+
+    <string name="home_title">Espace Client</string>
+    <string name="pharmacist_title">Espace Pharmacien</string>
+    <string name="welcome_user">Bienvenue, %1$s</string>
+    <string name="logout">Se déconnecter</string>
+    <string name="placeholder_info">Écran provisoire — les modules des autres membres seront branchés ici.</string>
+</resources>

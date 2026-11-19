@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:orientation="vertical">
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="52dp" android:paddingHorizontal="12dp">
+        <ImageView android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp"
+            android:layout_gravity="start|center_vertical" android:padding="8dp"
+            android:src="@drawable/ic_back" android:contentDescription="Retour"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:text="Dashboard anti-gaspillage"
+            android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold"/>
+    </FrameLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:paddingHorizontal="8dp">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardGreen" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="4dp" android:clickable="true" android:focusable="true"
+                app:cardBackgroundColor="@color/white" app:cardCornerRadius="16dp" app:cardElevation="0dp"
+                app:strokeColor="@color/level_green" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                    <TextView android:id="@+id/tvCountGreen" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textColor="@color/level_green" android:textSize="28sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Valides" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardOrange" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="4dp" android:clickable="true" android:focusable="true"
+                app:cardBackgroundColor="@color/white" app:cardCornerRadius="16dp" app:cardElevation="0dp"
+                app:strokeColor="@color/level_orange" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                    <TextView android:id="@+id/tvCountOrange" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textColor="@color/level_orange" android:textSize="28sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Proches de péremption" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardRed" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="4dp" android:clickable="true" android:focusable="true"
+                app:cardBackgroundColor="@color/white" app:cardCornerRadius="16dp" app:cardElevation="0dp"
+                app:strokeColor="@color/level_red" app:strokeWidth="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                    <TextView android:id="@+id/tvCountRed" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textColor="@color/level_red" android:textSize="28sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Périmés" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center_vertical" android:orientation="horizontal" android:padding="12dp">
+        <TextView android:id="@+id/tvFilterInfo" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSort" style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content" android:layout_height="40dp"
+            android:insetTop="0dp" android:insetBottom="0dp" android:textSize="11sp"/>
+    </LinearLayout>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:clipToPadding="false" android:paddingBottom="24dp"/>
+        <TextView android:id="@+id/tvEmpty" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:padding="24dp" android:gravity="center"
+            android:text="Aucun produit dans cette catégorie."
+            android:textColor="@color/text_secondary" android:textSize="13sp" android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>

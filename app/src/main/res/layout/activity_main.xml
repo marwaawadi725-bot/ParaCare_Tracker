@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <!-- Barre du haut -->
+        <FrameLayout android:layout_width="match_parent" android:layout_height="40dp">
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:text="@string/connexion"
+                android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="16sp"/>
+            <ImageView
+                android:layout_width="32dp" android:layout_height="32dp"
+                android:layout_gravity="end|center_vertical"
+                android:background="@drawable/bg_avatar" android:padding="6dp"
+                android:src="@drawable/ic_person" android:importantForAccessibility="no"/>
+        </FrameLayout>
+
+        <!-- Logo + titre -->
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center_horizontal"
+            android:background="@drawable/bg_hero" android:paddingTop="24dp" android:paddingBottom="16dp">
+            <ImageView
+                android:layout_width="64dp" android:layout_height="64dp"
+                android:background="@drawable/bg_logo" android:padding="16dp"
+                android:src="@drawable/ic_shield" android:importantForAccessibility="no"/>
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:text="@string/app_name"
+                android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="22sp"/>
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:text="@string/tagline"
+                android:textColor="@color/text_secondary" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Onglets Client / Pharmacien -->
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/roleToggle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" app:singleSelection="true" app:selectionRequired="true">
+            <Button
+                android:id="@+id/btnClient" style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="@string/role_client" android:textColor="@color/primary"
+                app:icon="@drawable/ic_person" app:iconTint="@color/primary"/>
+            <Button
+                android:id="@+id/btnPharmacien" style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="@string/role_pharmacien" android:textColor="@color/primary"
+                app:icon="@drawable/ic_shield" app:iconTint="@color/primary"/>
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <!-- Badge -->
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:background="@drawable/bg_badge"
+            android:gravity="center_vertical" android:padding="8dp">
+            <TextView
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="@string/badge_scan" android:textColor="@color/primary" android:textSize="11sp"/>
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/bg_pill" android:paddingHorizontal="8dp" android:paddingVertical="2dp"
+                android:text="@string/badge_particulier" android:textColor="@color/text_primary"
+                android:textSize="9sp" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Carte formulaire -->
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:orientation="vertical"
+            android:background="@drawable/bg_card" android:padding="16dp">
+
+            <TextView style="@style/ParaCare.Label" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/label_email"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail" style="@style/ParaCare.Field"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" app:startIconDrawable="@drawable/ic_mail">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="@string/hint_email" android:inputType="textEmailAddress" android:textSize="14sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:gravity="center_vertical">
+                <TextView style="@style/ParaCare.Label" android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:text="@string/label_password"/>
+                <TextView
+                    android:id="@+id/tvForgot" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/forgot" android:textColor="@color/primary"
+                    android:textSize="11sp" android:textStyle="bold"/>
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword" style="@style/ParaCare.Field"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" app:startIconDrawable="@drawable/ic_lock"
+                app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="@string/hint_password" android:inputType="textPassword" android:textSize="14sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin" android:layout_width="match_parent" android:layout_height="56dp"
+                android:layout_marginTop="18dp" android:text="@string/login" android:textStyle="bold"
+                app:cornerRadius="14dp" app:backgroundTint="@color/primary"
+                app:icon="@drawable/ic_login_arrow" app:iconGravity="textStart"/>
+
+            <TextView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:gravity="center"
+                android:text="@string/or" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFingerprint" style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:layout_marginTop="8dp" android:text="@string/fingerprint_login"
+                android:textColor="@color/text_primary" app:cornerRadius="14dp"
+                app:backgroundTint="@color/field_bg"
+                app:icon="@drawable/ic_fingerprint" app:iconTint="@null" app:iconGravity="textStart"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:gravity="center"
+            android:text="@string/new_on" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/tvCreateAccount" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:gravity="center" android:padding="6dp"
+            android:text="@string/create_secure" android:textColor="@color/primary"
+            android:textSize="13sp" android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" android:layout_marginTop="12dp"
+            android:background="@drawable/bg_pill" android:paddingHorizontal="12dp" android:paddingVertical="6dp"
+            android:text="@string/data_secure" android:textColor="@color/text_secondary" android:textSize="10sp"/>
+    </LinearLayout>
+</ScrollView>

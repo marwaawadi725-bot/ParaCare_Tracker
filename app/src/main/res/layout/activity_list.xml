@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:orientation="vertical">
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="52dp" android:paddingHorizontal="12dp">
+        <ImageView android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp"
+            android:layout_gravity="start|center_vertical" android:padding="8dp"
+            android:src="@drawable/ic_back" android:contentDescription="Retour"/>
+        <TextView android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:textColor="@color/text_primary"
+            android:textSize="16sp" android:textStyle="bold"/>
+    </FrameLayout>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:clipToPadding="false" android:paddingBottom="96dp"/>
+        <TextView android:id="@+id/tvEmpty" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:padding="24dp" android:gravity="center"
+            android:textColor="@color/text_secondary" android:textSize="13sp" android:visibility="gone"/>
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end" android:layout_margin="16dp" android:text="Ajouter"
+            android:textColor="@color/white" android:visibility="gone"
+            app:backgroundTint="@color/primary" app:icon="@drawable/ic_add" app:iconTint="@color/white"/>
+    </FrameLayout>
+</LinearLayout>

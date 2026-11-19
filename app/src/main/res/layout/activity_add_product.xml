@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="40dp">
+            <ImageView android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp"
+                android:layout_gravity="start|center_vertical" android:padding="8dp"
+                android:src="@drawable/ic_back" android:contentDescription="Retour"/>
+            <TextView android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:textColor="@color/text_primary"
+                android:textSize="16sp" android:textStyle="bold"/>
+        </FrameLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="📷 Scan IA (ML Kit)"
+            android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="2dp" android:text="Photographiez l emballage : nom, catégorie, date d expiration et PAO sont remplis automatiquement."
+            android:textColor="@color/text_secondary" android:textSize="12sp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnScanCamera" android:layout_width="0dp" android:layout_height="52dp"
+                android:layout_marginEnd="6dp" android:layout_weight="1" android:text="Caméra"
+                app:backgroundTint="@color/primary" app:cornerRadius="14dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnScanGallery" style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_height="52dp" android:layout_marginStart="6dp"
+                android:layout_weight="1" android:text="Galerie" android:textColor="@color/primary"
+                app:cornerRadius="14dp"/>
+        </LinearLayout>
+        <ProgressBar android:id="@+id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" android:layout_marginTop="8dp" android:visibility="gone"/>
+        <TextView android:id="@+id/tvScanInfo" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:background="@drawable/bg_badge" android:padding="10dp"
+            android:textColor="@color/primary" android:textSize="11sp" android:visibility="gone"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilName" style="@style/ParaCare.Field"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Nom du produit *" android:inputType="textCapSentences" android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Spinner android:id="@+id/spCategory" android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginTop="12dp" android:background="@drawable/bg_field" android:paddingHorizontal="8dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilExpiry" style="@style/ParaCare.Field"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etExpiry" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Date d expiration" android:inputType="none" android:textSize="14sp" android:focusable="false" android:clickable="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPao" style="@style/ParaCare.Field"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPao" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="PAO (mois après ouverture)" android:inputType="number" android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout android:id="@+id/groupStock" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPrice" style="@style/ParaCare.Field"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPrice" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Prix (€) *" android:inputType="numberDecimal" android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilQty" style="@style/ParaCare.Field"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etQty" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Quantité en stock *" android:inputType="number" android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/groupTrousse" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilOpened" style="@style/ParaCare.Field"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOpened" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Date d ouverture" android:inputType="none" android:textSize="14sp" android:focusable="false" android:clickable="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave" android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginTop="20dp" android:text="Enregistrer" android:textStyle="bold"
+            app:backgroundTint="@color/primary" app:cornerRadius="14dp"/>
+    </LinearLayout>
+</ScrollView>
